@@ -1,30 +1,25 @@
 <html>
   <body>
     <h1>Books</h1>
-    <table>
-      <tr>
-        <th>title</th>
-        <th>body</th>
-        <th colspan="3"> </th>
-      </tr>
-      <tr>
-        <td>リーダブルコード</td>
-        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-        <td>
-          <a>Show</a>
-        </td>
-        <td>
-          <a>Edit</a>
-        </td>
-        <td>
-          <a>Destroy</a>
-        </td>
-      </tr>
-  
-    </table>
+    <% @books.each do |book| %>
+      <p>Title</p>
+      <span><%= link_to book.title, book_path(book.id) %></span>
+      <p>Body</p>
+      <span><%= link_to book.body, book_path(book.id) %></span>
+    <% end %>
+
     <h2>New book</h2>
-    <form>
+    <%= form_with model: Book.new do |f| %>
+      <h4>title</h4>
+      <%= f.text_field :title %>
+    
+      <h4>body</h4>
+      <%= f.text_area :body %>
+    
+      <%= f.submit 'Create Book' %>
+    
+    <% end %>
   
-    </form>
+    
   </body>
 </html>
