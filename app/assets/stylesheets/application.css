@@ -18,3 +18,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.h1{
+  display: block;
+  font-size: 2em;
+  margin: 17.42px, 0 ;
+  font-weight: bold;
+}
+
+.thead{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table{
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+body{
+  background-color: #fff;
+  color: #333;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
