@@ -32,6 +32,17 @@
   border-color: inherit;
 }
 
+.th{
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+  padding-bottom:  5px;
+  
+}
+
+
+
 .table{
   display: table;
   border-collapse: separate;

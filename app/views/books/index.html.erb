@@ -1,11 +1,18 @@
-<html>
+
+<body>
+  <p id="notice"></p>
+  <h1>Books</h1>
   <table >
-    <% @books.each do |book| %>
+    <!--% @books.each do |book| %>-->
+    <thead>
       <tr>
         <th>Title</th>
         <th>Body</th>
         <th colspan = "3"></th>
       </tr>
+    </thead>
+    <% @books.each do |book| %>
+    <tbody>
       <tr>
       <td><%= link_to book.title, book_path(book.id) %></td>
       <td><%= link_to book.body, book_path(book.id) %></td>
@@ -21,6 +28,7 @@
         <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
       </td>
       </tr>
+    </tbody>
     <% end %>
   </table>
     
@@ -49,4 +57,3 @@
   
     
   </body>
-</html>
